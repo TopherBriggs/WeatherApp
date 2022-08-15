@@ -20,10 +20,11 @@ class WeatherData
 private:
     CURL* curl;
     CURLcode res;
+    Json::Value root;
 public:
     WeatherData();
     ~WeatherData();
-    int retrieveWeather(std::string city);
+    int retrieveWeather(std::string station);
 
 
 };

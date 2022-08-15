@@ -4,11 +4,16 @@
 
 class cFrameMain : public wxFrame
 {
+private:
+	WeatherData w;
 public:
 	cFrameMain();
 	~cFrameMain();
-
+	void OnButtonClicked(wxCommandEvent& evt);
 public:
-	wxTextCtrl* m_list1 = nullptr;
+	wxPanel* m_panel = nullptr;
+	wxStaticText* m_weatherText = nullptr;
+	wxTextCtrl* m_stationSelector = nullptr;
+	wxButton* m_searchButton = nullptr;
 };
 
