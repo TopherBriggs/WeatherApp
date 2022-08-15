@@ -24,7 +24,10 @@ private:
 public:
     WeatherData();
     ~WeatherData();
-    int retrieveWeather(std::string station);
+    void setStation(std::string station, std::string time = "");
+    std::string getStationURL();
+    std::string getCity();
+    int getWeather();
 
 
 };
