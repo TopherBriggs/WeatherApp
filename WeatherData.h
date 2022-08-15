@@ -3,6 +3,7 @@
 #include <curl/curl.h>
 #include <string>
 #include <json/json.h>
+#include "Apikeys.h"
 
 static int celsiusToFahrenheit(int temp)
 {
@@ -18,6 +19,7 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* use
 class WeatherData
 {
 private:
+    Apikeys keys;//struct that holds all api keys
     CURL* curl;
     CURLcode res;
     Json::Value root;
@@ -25,6 +27,7 @@ public:
     WeatherData();
     ~WeatherData();
     void setStation(std::string station, std::string time = "");
+    std::string getCoords(std::string location);
     std::string getStationURL();
     std::string getCity();
     int getWeather();

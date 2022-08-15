@@ -144,6 +144,7 @@
     <ClCompile Include="WeatherData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Apikeys.h" />
     <ClInclude Include="cApp.h" />
     <ClInclude Include="cFrameMain.h" />
     <ClInclude Include="WeatherData.h" />
